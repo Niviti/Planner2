@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/css/admin/Article.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+    <div class="Article-navbar">
+        Try to Register !!!!
+    </div>
+
+    </br>
+    </br>
+    </br>
+
+    <div style="margin-left:50px">
+        {{ form_start(form) }}
+        {{ form_row(form.email) }}
+        </br>
+        {{ form_row(form.pass) }}
+        </br>
+        <a href="{{ path('user')  }}">    <button type="submit" class="btn btn-success">Register <span class="fa fa-lock"></span></button></a>
+
+        {{ form_end(form) }}
+
+    </div>
+
+
+{% endblock %}
